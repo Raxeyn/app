@@ -121,3 +121,17 @@ fastify.listen(process.env.PORT, function(err, address) {
   console.log(`Your app is listening on ${address}`);
   fastify.log.info(`server listening on ${address}`);
 });
+
+client.on('message', msg => {
+    if (msg.content === "<RolVer") {
+    if (msg.member.hasPermission('MANAGE_ROLES')) {
+    let role = msg.guild.roles.find(r => r.name == "Üye");
+    if (!role)
+      return msg.channel.send(`Hey **${msg.author.username}**, **${role.name}** isimli rolü bulamadım!`);
+    msg.guild.members.filter(m => !m.user.bot).forEach(member => member.addRole(role));
+    msg.channel.send(`Hey **${msg.author.username}**, **${role.name}** isimli rolü tüm üyelere verdim.\nBiraz beklemen gerekecek o kadar...`);
+    } else {
+      msg.channel.send("Bu komutu kullanabilmek için `Rolleri Yönet` yetkisine ihtiyacın var!")
+    }
+  };
+});
