@@ -8,8 +8,8 @@ exports.run = async (client, message, args) => {
 
 const embed = new Discord.MessageEmbed()
 .setColor("#ffffff")
-.setAuthor(`Lord Creative Linkler`, client.user.avatarURL())
-.setDescription('**• [Lord Creative`i Ekleyin.](https://discord.com/oauth2/authorize?client_id=713713727794446397&scope=bot&permissions=8)**\n\n**• [Lord Creative Oy Ver](https://top.gg/bot/713713727794446397)**')
+.setAuthor(`Darkwill Linkler`, client.user.avatarURL())
+.setDescription('**• [Darkwill`i Ekleyin.](https://discord.com/api/oauth2/authorize?client_id=616282328905416727&permissions=8&scope=bot)**\n\n**• [Darkwill Oy Ver](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjWpZqOxI31AhXIQvEDHWk-BpQQFnoECAMQAQ&url=https%3A%2F%2Fdiscordbotlist.com%2Fbots%2Fdarkwill%2Fupvote&usg=AOvVaw3595kVhHPsy22zmYTNYVA_)**')
 .setFooter(`${message.author.username} tarafından istendi!`) 
 .setTimestamp()
 .setThumbnail(client.user.avatarURL())
