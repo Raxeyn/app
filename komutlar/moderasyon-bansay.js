@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 exports.run = (bot, message, args) =>
 {
-   if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send(`<:a_:821738957997211659>   **Bu komutu kullanabilmek için "\`Üyeleri Yasakla\`" yetkisine sahip olmalısın.**`);
+   if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send(`<a:reddetmek:825688868107059201> **Bu komutu kullanabilmek için "\`Üyeleri Yasakla\`" yetkisine sahip olmalısın.**`);
  
   let Discord = require('discord.js');
     var userlist = message.guild.fetchBans();
@@ -10,14 +10,14 @@ exports.run = (bot, message, args) =>
      if(collection.first() == null)
      {
        const embed = new Discord.MessageEmbed()
-       .setTitle(`<:a_:821738957997211659>  **Banlanan Kullanıcı bulunamadı**`)
+       .setTitle(`<a:reddetmek:825688868107059201> **Banlanan Kullanıcı bulunamadı**`)
        .setColor("#ffffff");
        message.channel.send({embed});
      }
      else
      {
        const embed = new Discord.MessageEmbed()
-       .setTitle("<:a_:821738957997211659>  Banlistesi | Sunucudan Banlananlar")
+       .setTitle("<a:loading:837990620198207498> Banlistesi | Sunucudan Banlananlar")
        .setColor("#ffffff");
        for(userlist of collection)
        {

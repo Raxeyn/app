@@ -17,9 +17,9 @@ exports.run = async(client, message, args) => {
   
   let user = message.mentions.users.first();
   let reason = args.slice(1).join(' ');
- if (db.has(`log_${message.guild.id}`) === false) return message.channel.send(`<:a_:821738957997211659>  **Mod Log Kanalı Ayarlanmamış Ayarlamak için  | ${prefix}modlog #kanal`);
+ if (db.has(`log_${message.guild.id}`) === false) return message.channel.send(`<a:loading:837990620198207498> **Mod Log Kanalı Ayarlanmamış Ayarlamak için  | ${prefix}modlog #kanal`);
   let modlog = message.guild.channels.cache.get(db.fetch(`log_${message.guild.id}`).replace("<#", "").replace(">", ""));
-  if (message.mentions.users.size < 1) return message.channel.send('<:a_:821738957997211659>  **Lütfen Kicklemek İstediğiniz Kullanıcıyı Etiketleyin**');
+  if (message.mentions.users.size < 1) return message.channel.send('<a:loading:837990620198207498> **Lütfen Kicklemek İstediğiniz Kullanıcıyı Etiketleyin**');
   if (reason.length < 1) return message.channel.send('<:a_:821738957997211659>   **Kickleme Sebebinizi Giriniz**');
   if (user.id === message.author.id) return message.channel.send('<:a_:821738957997211659>  **Kendini Kickleyeceğine Kendin Çıksana ?**');
 
@@ -35,7 +35,7 @@ exports.run = async(client, message, args) => {
   
   const embed2 = new Discord.MessageEmbed()
   .setColor("#ffffff")
-  .setDescription(`<:a_:821738957997211659>  **Kullanıcı Başarıyla Kicklendi**`)
+  .setDescription(`<a:onaylamak:825688895286280232> **Kullanıcı Başarıyla Kicklendi**`)
   message.channel.send(embed2)
   
 };
