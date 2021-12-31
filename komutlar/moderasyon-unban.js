@@ -32,7 +32,7 @@ let prefix = await db.fetch(`prefix.${message.guild.id}`) || fynx.prefix;
   
   const embed2 = new Discord.MessageEmbed()
   .setColor("#ffffff")
-  .setDescription(`<:a_:821738957997211659>  Belirtiğiniz İD'nin Banı Açıldı`)
+  .setDescription(`<a:onaylamak:825688895286280232> Belirtiğiniz İD'nin Banı Açıldı`)
   message.channel.send(embed2)
 
   

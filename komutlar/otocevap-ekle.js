@@ -6,7 +6,7 @@ exports.run = async(bot, message, args) => {
 let prefix = await db.fetch(`prefix.${message.guild.id}`) || fynx.prefix 
 
   const embeddd = new Discord.MessageEmbed()
-  .setDescription('Bu Komutu Kullanmak İçin `Sunucuyu Yönet` Yetkisi Lazım!')
+  .setDescription('<a:reddetmek:825688868107059201> Bu Komutu Kullanmak İçin `Sunucuyu Yönet` Yetkisi Lazım!')
   .setColor("RED");
 
                 let mentionEmbed = new Discord.MessageEmbed()
@@ -26,7 +26,7 @@ if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(e
                      else gonderileceksey = args.slice(1, 1000, args[1]).join(' '); 
                 
                      let welcomeEmbed = new Discord.MessageEmbed()
-                     .addField(`Bu sunucuya özel komut eklendi.`, `\`${komut}\` yazıldığı zaman \`${gonderileceksey}\` olarak yanıt verecek.`)
+                     .addField(`<a:onaylamak:825688895286280232> Bu sunucuya özel komut eklendi.`, `\`${komut}\` yazıldığı zaman \`${gonderileceksey}\` olarak yanıt verecek.`)
                      .setColor('GREEN')
                      db.set(`sunucuKomut_${message.guild.id}`, komut)
                      db.set(`sunucuMesaj_${message.guild.id}`, gonderileceksey)

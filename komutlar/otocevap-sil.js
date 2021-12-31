@@ -7,7 +7,7 @@ exports.run = async(bot, message, args) => {
 let prefix = await db.fetch(`prefix.${message.guild.id}`) || fynx.prefix 
                     
          var user = message.mentions.users.first() || message.author;
-if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.sendEmbed(new Discord.MessageEmbed().setDescription('Bu Komutu Kullanmak İçin `Sunucuyu Yönet` Yetkisi Lazım!').setColor("RED")); 
+if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.sendEmbed(new Discord.MessageEmbed().setDescription('<a:reddetmek:825688868107059201> Bu Komutu Kullanmak İçin `Sunucuyu Yönet` Yetkisi Lazım!').setColor("RED")); 
                 
                     
                    let komut = await db.fetch(`sunucuKomut_${message.guild.id}`) 
@@ -19,7 +19,7 @@ if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.sendEm
                    if(args[0] == 'Bulunmuyor.') return message.channel.send(`Bu komut mevcut değil.\nMevcut özel komutlar: \`${komut}\``)
                     
                      let welcomeEmbed = new Discord.MessageEmbed()
-                     .addField(`Bu sunucudan özel komut silindi.`, `\`${komut}\` silindi.`)
+                     .addField(`<a:onaylamak:825688895286280232> Bu sunucudan özel komut silindi.`, `\`${komut}\` silindi.`)
                      .setColor('GREEN')
                 
                      db.set(`sunucuKomut_${message.guild.id}`, 'Bulunmuyor.')
