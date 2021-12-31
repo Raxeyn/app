@@ -26,20 +26,20 @@ let prefix = await db.fetch(`prefix.${message.guild.id}`) || fynx.prefix
   message.member.removeRole(message.guild.roles.get(ar));
   message.member.addRole(message.guild.roles.get(vr));
       
-  return client.channels.get(lh).send(`:scroll: <@${message.author.id}> İçin Kayıt İşlemi Başarı İle Tamamlandı. :clipboard:`)
+  return client.channels.get(lh).send(`<a:onaylamak:825688895286280232> <@${message.author.id}> İçin Kayıt İşlemi Başarı İle Tamamlandı. :clipboard:`)
   }
   let isim = args[0]
   let yas = args[1];
-  if (!isim) return message.channel.send(`Seni Kayıt Etmem İçin Bir İsim Girmelisin : \`${prefix}kayıt Arda 15\``)
-  if (!yas) return message.channel.send(`Seni Kayıt Etmem İçin Bir Yaş Girmelisin : \`${prefix}kayıt Utku 17\``)
+  if (!isim) return message.channel.send(`<a:B_Yildiz:825644101985894400>Seni Kayıt Etmem İçin Bir İsim Girmelisin : \`${prefix}kayıt Arda 15\``)
+  if (!yas) return message.channel.send(`<a:B_Yildiz:825644101985894400>Seni Kayıt Etmem İçin Bir Yaş Girmelisin : \`${prefix}kayıt Utku 17\``)
 
   
-    message.reply(`Kaydınız Oluşturuldu.`)
+    message.reply(`<a:onaylamak:825688895286280232>Kaydınız Oluşturuldu.`)
   message.member.setNickname(isim31.replace("-uye-", `${isim}`).replace("-yas-", `${yas}`))
   message.member.removeRole(message.guild.roles.get(ar));
   message.member.addRole(message.guild.roles.get(vr));
       
-  client.channels.get(lh).send(`:scroll: <@${message.author.id}> İçin Kayıt İşlemi Başarı İle Tamamlandı. :clipboard:`)
+  client.channels.get(lh).send(`<a:onaylamak:825688895286280232> <@${message.author.id}> İçin Kayıt İşlemi Başarı İle Tamamlandı. :clipboard:`)
 }
 exports.config = {
  name: "kayıt-ol",
